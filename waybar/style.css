@@ -1,0 +1,109 @@
+@import "../color/color.css";
+
+@define-color background #11111A;
+
+* {
+  font-size: 16px;
+  font-family: "JetBrainsMono Nerd Font","JetBrainsMono NF", "Font Awesome 7 Free"; 
+}
+
+window#waybar {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.modules-center {
+  background: @background;
+  padding: 12px 12px;
+  margin: 0 0 6px 0;
+  border-radius: 28px;
+}
+
+#custom-notification {
+  background: transparent;
+  padding: 0 4px;
+}
+
+#custom-mon {
+  color: @blue;
+}
+
+#clock {
+  margin: 0 0 0 4px;
+  background: transparent;
+  color: @yellow;
+}
+
+#mpris {
+  padding: 0 12px;
+  background: transparent;
+  color: @red;
+}
+
+#custom-wayves {
+  color: @red;
+  background: transparent;
+}
+
+#workspaces {
+  padding: 0 10px;
+}
+
+#workspaces button {
+  transition: all 250ms ease-in-out;
+  padding: 0 10px;
+  background: transparent;
+  border-radius: 16px;
+}
+
+#workspaces button.active {
+  min-width: 50px;
+  background: linear-gradient(120deg, @red, @red 25%, @blue);
+}
+
+#backlight {
+  padding: 0 20px 0 0;
+  color: @dark-pink;
+}
+
+#custom-wifi-vpn {
+  color: @orange;
+  padding: 0 20px 0 0;
+}
+
+#pulseaudio {
+  padding: 0 16px 0 0;
+  background: transparent;
+  color: @pink;
+}
+
+#battery {
+  padding: 0 10px 0 8px;
+  background: transparent;
+  color: @light-green;
+}
+
+#cpu {
+  padding: 0 0 0 8px;
+  background: transparent;
+  color: @blue;
+}
+
+#memory {
+  padding: 0 0 0 8px;
+  background: transparent;
+  color: @blue;
+}
+
+#temperature {
+  padding: 0 0 0 8px;
+  background: transparent;
+  color: @blue;
+}
+
+#disk {
+  padding: 0 0 0 8px;
+  background: transparent;
+  color: @blue;
+}

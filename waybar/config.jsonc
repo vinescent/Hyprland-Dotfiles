@@ -1,0 +1,201 @@
+{
+  "position": "top",
+  "margin-top": 16,
+
+  "modules-center": [
+    "group/notification",
+    "custom/mon",
+    "clock",
+    "mpris",
+    "custom/wayves",
+    "hyprland/workspaces",
+    "backlight",
+    "custom/wifi-vpn",
+    "pulseaudio",
+    "battery",
+    "battery#charging",
+  ],
+
+  "reload_style_on_change": true,
+
+  "group/notification": {
+     "orientation": "horizontal",
+     "drawer": {
+       "transition-duration": 500
+     },
+   "modules": [
+      "custom/notification",
+      "cpu",
+      "memory",
+      "temperature",
+      "disk",
+      "custom/powerdraw",
+     ]
+   },
+
+  "custom/notification": {
+    "format": "󰵚",
+    "on-click": "swaync-client -t",
+    "tooltip": false,
+  },
+
+  "clock": {
+    "format": "{:%I:%M}",
+    "interval": 1,
+    "tooltip-format": "\n<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "calendar-weeks-pos": "right",
+    "today-format": "<span color='#7645AD'><b><u>{}</u></b></span>",
+    "format-calendar": "<span color='#aeaeae'><b>{}</b></span>",
+    "format-calendar-weeks": "<span color='#aeaeae'><b>W{:%V}</b></span>",
+    "format-calendar-weekdays": "<span color='#aeaeae'><b>{}</b></span>"
+  },
+
+  "custom/mon": { 
+    "exec": "~/.config/waybar/scripts/mon_indicator.sh",
+    "return-type": "json",
+    "interval": "once",
+    "signal": 1,
+},
+
+  "mpris": {
+    "format": "󰓇 {title}",
+    "max-length": 30,
+    "interval": 1,
+    "on-click": "playerctl play-pause -p spotify",
+    "on-scroll-up": "playerctl previous -p spotify",
+    "on-scroll-down": "playerctl next -p spotify"
+  },
+
+  "custom/wayves": {
+    "format": "{}",
+    "exec": "python ~/.config/wayves/wayves.py -o cava -i cava -a cava"
+  },
+
+  "hyprland/workspaces": {
+    "format": "<span font='18px'>{icon}</span>",
+    "format-icons": {},
+    "persistent-workspaces": {
+      "*": [1,2,3,4,5],
+      "DP-2": [1,2,3,4,5],
+      "HDMI-A-1": [4,5,6]
+    }
+  },
+
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-muted": "",
+    "tooltip-format": "{volume}% {icon}",
+    "format-icons": {
+      "headphones": "",
+      "bluetooth": "󰥰",
+      "handsfree": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        ""
+      ]
+    },
+    "scroll-step": 5,
+    "justify": "center",
+    "on-click": "kitty -e bluetuith",
+    "tooltip-format": "Left click for bluetooth",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAUL_SINK@ -5%",
+    "max-volume": 100,
+  },
+
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon}",
+    "format-icons": [
+      "",
+      "󰪞",
+      "󰪟",
+      "󰪠",
+      "󰪡",
+      "󰪢",
+      "󰪣",
+      "󰪤",
+      "󰪥",
+    ],
+    "on-scroll-down": "light -U 5",
+    "on-scroll-up": "light -A 5",
+    "min-brightness": 5,
+    "smooth-scrolling-threshold": 1
+  },
+
+  "custom/wifi-vpn": {
+  "exec": "/home/vinescent/.config/waybar/scripts/wifi_vpn.sh",
+  "interval": 5,
+  "return-type": "text"
+  },
+
+  "battery": {
+    "interval": 1,
+    "states": {
+      "good": 95,
+      "warning": 15,
+      "critical": 5
+    },
+    "tooltip": true,
+    "format": "{capacity}% {icon}",
+    "format-time": "{H}h {M}min remaining",
+    "tooltip-format": "{time}",
+    "format-charging": "",
+    "format-plugged": "",
+    "format-icons": ["󰂎","󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰂄"],
+    "on-click": "~/.config/waybar/scripts/powerdraw.sh"
+  },
+
+  "battery#charging": {
+    "interval": 1,
+    "states": {
+      "good": 95,
+      "warning": 15,
+      "critical": 5
+    },
+    "tooltip": true,
+    "format": "",
+    "format-time": "{H}h {M}min until full",
+    "tooltip-format": "{time}",
+    "format-charging": "{capacity}% {icon}",
+    "format-plugged": "{capacity}% {icon}",
+    "format-icons": ["󰢟","󰢜","󰂆","󰂇","󰂈","󰢝","󰂉","󰢞","󰂊","󰂋","󰂄"],
+    "on-click": "~/.config/waybar/scripts/powerdraw.sh"
+  },
+
+  "cpu": {
+    "interval": 1,
+    "format": " {usage}%",
+  },
+
+  "memory": {
+    "interval": 1,
+    "format": " {percentage}%"
+  },
+
+  "disk": {   
+    "interval": 30,
+    "format": " {percentage_used}%",
+    "path": "/"
+  },
+
+  "temperature": {
+    "format": " {temperatureC}°C",
+    "format-critical": " {temperatureC}°C",
+    "interval": 1,
+    "critical-threshold": 80,
+    "on-click": "foot btop",
+  },
+
+  "custom/powerDraw": {
+    "format": "{}",
+    "tooltip": false,
+    "interval": 1,
+    "exec": "~/.config/waybar/scripts/powerdraw.sh",
+    "return-type": "json"
+  },
+}

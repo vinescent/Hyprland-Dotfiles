@@ -1,0 +1,13 @@
+/* Monochrome colors */
+
+@define-color background #131a28;
+@define-color yellow #83878a;
+@define-color green #6c6d6f;
+@define-color light-green #9fa0a2;
+@define-color purple #6c6d6f;
+@define-color blue #6c6d6f;
+@define-color magenta #535456;
+@define-color orange #83878a;
+@define-color red #535456;
+@define-color dark-pink #6c6d6f;
+@define-color pink #83878a;

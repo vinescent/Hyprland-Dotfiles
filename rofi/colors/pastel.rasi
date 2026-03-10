@@ -1,0 +1,11 @@
+/* Pastel colors theme */
+
+* {
+    background:     #11111A; /* bg_main */
+    background-alt: rgba(0,0,0,0); /* bg_dim */
+    foreground:     #e7e7e7; /* fg_main */
+    selected:       #1C1D2D; /* bg_mode_line */
+    selected-fg:    #87B2F3; /* fg_mode_line */
+    active:         #000000; /* g_green */
+    urgent:         #dba2a2; /* red */
+}

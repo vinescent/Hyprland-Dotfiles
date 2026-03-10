@@ -1,0 +1,11 @@
+/* Tinted blur theme */
+
+* {
+    background:     rgba(24,24,24,0.2); /* bg_main */
+    background-alt: rgba(0,0,0,0); /* bg_dim */
+    foreground:     #e7e7e7; /* fg_main */
+    selected:       rgba(80,80,80,0.2); /* bg_mode_line */
+    selected-fg:    #e7e7e7; /* fg_mode_line */
+    active:         rgba(133,195,151,0.2); /* g_green */
+    urgent:         #dba2a2; /* red */
+}

@@ -1,0 +1,164 @@
+@import "../color/color.css";
+
+* {
+  font-size: 16px;
+  font-family: "JetBrainsMono Nerd Font,JetBrainsMono NF, Font Awesome 7 Free" ;
+  color: #6a6a6b;
+}
+
+window#waybar {
+  background: transparent;
+  margin: 5;
+ }
+
+.modules-right {
+  padding-left: 5;
+  margin-top: 2;
+  background: transparent;
+}
+
+.modules-center {
+  padding: 0 15;
+  margin-top: 2;
+}
+
+.modules-left {
+  margin: 2 0 0 10;
+  background: transparent;
+}
+
+#custom-logo {
+  padding: 6 16 6 12;
+  margin: 2 8 0 5;
+  background: @background;
+  border-radius: 12;
+  color: @blue;
+}
+
+#cpu {
+  padding: 2 12 0 12;
+  border-radius: 12 0 0 12;
+}
+
+#memory,
+#temperature,
+#disk,
+#custom-powerdraw {
+  padding: 2 12 0 0;
+}
+
+#disk {
+  margin: 0 10 0 0;
+  border-radius: 0 12 12 0;
+}
+
+#cpu,
+#memory,
+#temperature,
+#disk,
+#custom-powerdraw {
+  background: @background;
+}
+
+#clock {
+  padding: 0 12 0 12;
+  margin: 2 8 0 0;
+  background: @background;
+  border-radius: 12;
+  color: @yellow;
+}
+
+#window {
+  padding: 0 11 0 11;
+  margin: 2 8 0 0;
+  background: @background;
+  border-radius: 12;  
+  color: #121212;
+}
+
+#workspaces {
+
+}
+
+#workspaces button {
+  transition: all 250ms ease-in-out;
+  padding: 0 10 0 10;
+  margin: 0 2;
+  background: @background;
+  border-radius: 16px;
+}
+
+#workspaces button.active {
+  min-width: 50px;
+  background: linear-gradient(120deg, @red, @red 25%, @blue);
+}
+
+#mpris {
+  padding: 6 10;
+  margin: 2 2 0 2;
+  border-radius: 20px;
+  background: @background;
+  color: @red;
+}
+
+#tray {
+  padding: 0 14 0 14;
+  margin: 2 8 0 0;
+  background: @background;
+  border-radius: 12;
+}
+
+#backlight {
+  padding: 0 14 0 14;
+  margin: 2 8 0 0;
+  background: @background;
+  border-radius: 12;
+  color: @orange;
+}
+
+#pulseaudio {
+  padding: 0 18 0 10;
+  margin: 2 0 0 0;
+  background: @background;
+  border-radius: 12;
+  color: @pink;
+}
+
+#battery {
+  padding: 0 11 0 11;
+  margin: 2 8 0 5;
+  background: @background;
+  border-radius: 12;
+  color: @light-green;
+}
+
+#battery.charging {
+  color: @green;
+}
+
+#temperature.critical,
+#pulseaudio.muted {
+  color: @red;
+  padding-top: 0;
+}
+
+#battery.warning:not(.charging) {
+    background-color: #ffbe61;
+    color: black;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink-active {
+  to {
+    background-color: lightgreen;
+  }
+}

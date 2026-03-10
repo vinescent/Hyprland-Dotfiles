@@ -1,0 +1,30 @@
+# Ignore everything
+*
+
+# Allow git to traverse directories
+!*/
+
+# Unignore .gitignore itself
+!.gitignore
+
+# Unignore specific folders and their contents
+!cava/**
+!color/**
+!fastfetch/**
+!fish/**
+!gtk-3.0/**
+!gtk-4.0/**
+!htop/**
+!hypr/**
+!kitty/**
+!nautilus/**
+!neofetch/**
+!nwg-look/**
+!rofi/**
+!satty/**
+!scripts/**
+!swaync/**
+!wal/**
+!waybar/**
+!wayves/**
+!wlogout/**

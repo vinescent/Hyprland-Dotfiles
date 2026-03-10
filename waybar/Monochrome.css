@@ -1,0 +1,92 @@
+@define-color  bg rgba(17,17,17,0.90);
+@define-color  bg-alt rgba(24,24,24,0.90);
+@define-color  fg #FFFFFF;
+@define-color  fg-dim #D0D0D0;
+@define-color  accent #FFFFFF;
+@define-color  accent-dim #CCCCCC;
+@define-color  border #FFFFFF;
+@define-color  urgent #FF5555;
+
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 12.5px;
+}
+
+window#waybar {
+  background: @bg;
+  color: @fg;
+  border: 2px solid @border;
+  border-radius: 10px;
+  padding: 6px 10px;
+}
+
+#workspaces {
+  background: transparent;
+}
+
+#workspaces button {
+  color: @fg-dim;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 4px 8px;
+  margin-right: 6px;
+  transition: all 120ms ease;
+}
+
+#workspaces button:hover {
+  color: @fg;
+  border-color: @accent-dim;
+}
+
+#workspaces button.active {
+  color: #111111;
+  background: @accent;
+  border-color: @accent;
+}
+
+#workspaces button.urgent {
+  color: #111111;
+  background: @urgent;
+  border-color: @urgent;
+}
+
+#clock,
+#cpu,
+#memory,
+#temperature,
+#disk,
+#battery,
+#network,
+#pulseaudio,
+#tray,
+#window,
+#backlight {
+  color: @fg;
+  background: @bg-alt;
+  border: 2px solid @border;
+  border-radius: 8px;
+  padding: 4px 10px;
+  margin-left: 8px;
+}
+
+#tray {
+  background: transparent;
+  border: 2px solid transparent;
+}
+
+#pulseaudio.muted {
+  color: @fg-dim;
+}
+
+#battery.warning {
+  color: #111111;
+  background: #FFD166;
+  border-color: #FFD166;
+}
+
+#battery.critical {
+  color: #FFFFFF;
+  background: #E54B4B;
+  border-color: #E54B4B;
+}
