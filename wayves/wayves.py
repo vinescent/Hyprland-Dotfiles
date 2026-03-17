@@ -41,9 +41,9 @@ option_values = {
     },
 
     'flat_values': {
-        'off_flat_sections': 16,
-        'inactive_flat_sections': 16,
-        'active_flat_sections': 16,
+        'off_flat_sections': 0,
+        'inactive_flat_sections': 0,
+        'active_flat_sections': 0,
     },
 
     'cava_values': {
@@ -231,7 +231,7 @@ def multiple_animations():
     while True:
         sound, player = check_sound_and_player_status()
         if player is False:
-            current_category = 'off'
+            current_category = 'inactive'
 
         elif sound is False:
             current_category = 'inactive'

@@ -22,10 +22,11 @@ window#waybar {
 
 #custom-notification {
   background: transparent;
-  padding: 0 4px;
+  padding: 0 6px 0 4px;
 }
 
 #custom-mon {
+  padding: 0 4px 0 0;
   color: @blue;
 }
 
@@ -36,7 +37,7 @@ window#waybar {
 }
 
 #mpris {
-  padding: 0 12px;
+  padding: 0 0 0 12px;
   background: transparent;
   color: @red;
 }
@@ -44,6 +45,7 @@ window#waybar {
 #custom-wayves {
   color: @red;
   background: transparent;
+  padding: 0 0 0 12px;
 }
 
 #workspaces {
@@ -52,14 +54,14 @@ window#waybar {
 
 #workspaces button {
   transition: all 250ms ease-in-out;
-  padding: 0 10px;
+  padding: 0 8px;
   background: transparent;
   border-radius: 16px;
 }
 
 #workspaces button.active {
   min-width: 50px;
-  background: linear-gradient(120deg, @red, @red 25%, @blue);
+  background: linear-gradient(120deg, @red, @red 20%, @blue);
 }
 
 #backlight {

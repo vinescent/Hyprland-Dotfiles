@@ -4,7 +4,6 @@
 
   "modules-center": [
     "group/notification",
-    "custom/mon",
     "clock",
     "mpris",
     "custom/wayves",
@@ -68,7 +67,7 @@
 
   "custom/wayves": {
     "format": "{}",
-    "exec": "python ~/.config/wayves/wayves.py -o cava -i cava -a cava"
+    "exec": "python ~/.config/wayves/wayves.py -o cava -a cava"
   },
 
   "hyprland/workspaces": {

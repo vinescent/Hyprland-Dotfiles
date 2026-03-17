@@ -128,7 +128,7 @@
 
   "custom/wifi-vpn": {
   "exec": "/home/vinescent/.config/waybar/scripts/wifi_vpn.sh",
-  "interval": 5,
+6;9u "interval": 5,
   "return-type": "text"
   },
 
