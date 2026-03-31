@@ -9,6 +9,7 @@ awww img --transition-type wipe --transition-angle 30 --transition-step 90 $WP_P
 # Update pywal terminal colors
 wal -i $WP_PATH
 
-# update hyprlock symlink
+# update hyprlock 8symlink
 ln -sfn "$WP_PATH" "$HOME/.config/hypr/hyprlock.png"
-sudo cp "$WP_PATH" "/usr/share/sddm/themes/pixie/assets/background.jpg"
+
+
